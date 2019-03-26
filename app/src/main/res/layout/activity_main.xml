@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:id="@+id/containerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+    <ListView
+        android:id="@+id/rv_pet_catalog"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <TextView
+        android:id="@+id/tv_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="total count : 0"
+        app:layout_anchor="@id/rv_pet_catalog"
+        app:layout_anchorGravity="center"
+        android:visibility="gone"
+        />
+
+    <include
+        android:id="@+id/empty_view"
+        layout="@layout/view_empty"
+        android:visibility="gone"
+        />
+
+    </LinearLayout>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fabtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:fabSize="normal"
+        app:layout_anchor="@id/containerView"
+        app:layout_anchorGravity="end|bottom"
+        android:layout_margin="10dp"
+        android:src="@drawable/ic_pets_black_24dp"
+        android:onClick="onAddpet"/>
+
+
+</android.support.design.widget.CoordinatorLayout>

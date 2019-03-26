@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item android:id="@+id/action_dummy"
+        android:title="Add Dummy Pet"
+        app:showAsAction="never"/>
+
+    <item android:id="@+id/action_deleteallpet"
+        android:title="Delete All Pet"
+        app:showAsAction="never"/>
+
+</menu>
